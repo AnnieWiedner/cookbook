@@ -17,3 +17,6 @@ CREATE TABLE recipes (
   instructions VARCHAR(255),
   user_id INT references users(id)
 );
+
+ALTER TABLE recipes ADD name VARCHAR(255);
+ALTER TABLE recipes ADD image_url VARCHAR(255);

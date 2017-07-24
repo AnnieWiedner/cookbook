@@ -28,7 +28,7 @@ class RecipeController < Sinatra::Base
     request_body = JSON.parse(request.body.read)
     recipe = Recipe.new(request_body)
     recipe.save
-    recipe.to_json
+    Recipe.all.to_json
   end
 
   patch '/:id' do
