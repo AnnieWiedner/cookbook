@@ -22,13 +22,25 @@ class UserController < Sinatra::Base
     user.to_json
   end
 
-  post '/' do
+  post '/register' do
     response['Access-Control-Allow-Origin'] = '*'
     content_type :json
     request_body = JSON.parse(request.body.read)
     user = User.new(request_body)
     user.save
     user.to_json
+  end
+
+  post '/login' do
+    response['Access-Control-Allow-Origin'] = '*'
+    content_type :json
+    request_body = JSON.parse(request.body.read)
+    user = User.find_by({email: request_body["email"]})
+    if user && user.authenticate(request_body["password"])
+      user.to_json
+    else
+      p "user not there"
+    end
   end
 
   patch '/:id' do
