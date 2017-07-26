@@ -1,11 +1,12 @@
 require 'bundler'
 Bundler.require
 
-require './models/UserModel'
 require './models/RecipeModel'
+require './models/UserModel'
 
-require './controllers/UserController'
+require './controllers/ApplicationController'
 require './controllers/RecipeController'
+require './controllers/UserController'
 
 run Sinatra::Application
 
@@ -14,5 +15,6 @@ ActiveRecord::Base.establish_connection(
   database: 'cookbooks'
 )
 
-map('/users'){run UserController}
+
 map('/recipes'){run RecipeController}
+map('/users'){run UserController}
