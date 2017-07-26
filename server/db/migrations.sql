@@ -20,3 +20,5 @@ CREATE TABLE recipes (
 
 ALTER TABLE recipes ADD name VARCHAR(255);
 ALTER TABLE recipes ADD image_url VARCHAR(255);
+
+-- ALTER TABLE users ADD COLUMN token VARCHAR(255);

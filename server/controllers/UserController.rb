@@ -39,7 +39,7 @@ class UserController < Sinatra::Base
     if user && user.authenticate(request_body["password"])
       user.to_json
     else
-      p "user not there"
+      {error: "Login failed... try again or register as a new user"}.to_json
     end
   end
 
