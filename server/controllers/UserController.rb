@@ -2,16 +2,16 @@ require 'SecureRandom'
 
 class UserController < ApplicationController
 
-  # get '/' do
-  #   users = User.all
-  #   users.to_json
-  # end
-  #
-  # get '/:id' do
-  #   id = params[:id]
-  #   user = User.find(id)
-  #   user.to_json
-  # end
+  get '/' do
+    users = User.all
+    users.to_json
+  end
+
+  get '/:id' do
+    id = params[:id]
+    user = User.find(id)
+    user.to_json
+  end
 
   post '/register' do
     user_details = JSON.parse(request.body.read)
@@ -35,21 +35,21 @@ class UserController < ApplicationController
     end
   end
 
-  # patch '/:id' do
-  #   id = params[:id]
-  #   user = User.find(id)
-  #   request_body = JSON.parse(request.body.read)
-  #   user.update_attributes(request_body)
-  #   user.save
-  #   user.to_json
-  # end
-  #
-  # delete '/:id' do
-  #   id = params[:id]
-  #   user = User.find(id)
-  #   user.destroy
-  #   users = User.all
-  #   users.to_json
-  # end
+  patch '/:id' do
+    id = params[:id]
+    user = User.find(id)
+    request_body = JSON.parse(request.body.read)
+    user.update_attributes(request_body)
+    user.save
+    user.to_json
+  end
+
+  delete '/:id' do
+    id = params[:id]
+    user = User.find(id)
+    user.destroy
+    users = User.all
+    users.to_json
+  end
 
 end
