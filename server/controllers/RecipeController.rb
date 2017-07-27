@@ -16,7 +16,6 @@ class RecipeController < ApplicationController
     token = params[:token]
     user = User.where(token: token)
     user_id = user[0].id
-
     request_body = JSON.parse(request.body.read)
     recipe = Recipe.new(request_body)
     recipe["user_id"] = user_id
