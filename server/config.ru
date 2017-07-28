@@ -4,9 +4,11 @@ Bundler.require
 require './models/RecipeModel'
 require './models/UserModel'
 
+
 require './controllers/ApplicationController'
 require './controllers/RecipeController'
 require './controllers/UserController'
+
 
 run Sinatra::Application
 

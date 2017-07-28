@@ -1,6 +1,15 @@
 class RecipeController < ApplicationController
 
   get '/' do
+    token = params[:token]
+    user = User.where(token: token)
+    currentUser = user[0].id
+    recipes = Recipe.where(user_id: currentUser)
+    recipes.to_json
+  end
+
+# to see all of the users recipes
+  get '/all' do
     recipes = Recipe.all
     # binding pry
     recipes.to_json
@@ -15,12 +24,13 @@ class RecipeController < ApplicationController
   post '/' do
     token = params[:token]
     user = User.where(token: token)
-    user_id = user[0].id
+    currentUser = user[0].id
     request_body = JSON.parse(request.body.read)
     recipe = Recipe.new(request_body)
-    recipe["user_id"] = user_id
+    recipe["user_id"] = currentUser
     recipe.save
-    Recipe.all.to_json
+    recipes = Recipe.where(user_id: currentUser)
+    recipes.to_json
   end
 
   patch '/:id' do
