@@ -1,0 +1,11 @@
+<button (click) = 'registerUser()' id="register">Register</button>
+
+<div id="header">
+  <h1>Virtual Cookbook Login</h1>
+  <p>{{errorMessage}}</p>
+<div>
+<div class="container">
+  <input [(ngModel)]='user.email' placeholder="Email" class="item"/>
+  <input [(ngModel)]='user.password' type="password" placeholder="Password" class="item"/>
+  <button (click) ='loginUser()' class="item" id="login">Login</button>
+</div>

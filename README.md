@@ -1,3 +1,4 @@
+
 # Project3
 
 Cookbook App - third project for WDI at GA
@@ -27,7 +28,7 @@ I will upload these over the weekend
 * Background images and additional styling needs to be added to the Details and List Components
 * User cannot edit their recipe once it is added
 
-## What would I like to expand on? 
+## What would I like to expand on?
 * Add an explore page to view all users' receipes
 * Make instructions easier to add (maybe separate that into its own SQL table that belongs_to a specific recipe)
 * Allow users to comment on recipes

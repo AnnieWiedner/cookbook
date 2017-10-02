@@ -1,0 +1,85 @@
+h1 {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h3 {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+img {
+  height: 200px;
+  display: block;
+  margin: auto;
+}
+
+#back {
+  background-color: fuchsia;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#back:hover{
+  background-color: red;
+}
+
+#logout {
+  background-color: rgb(59, 169, 156);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  width: 100px;
+  height: 30px;
+  position: fixed;
+  right: 10px;
+  line-height: 30px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 12px;
+  color: white;
+}
+
+#delete {
+  border: red 2px solid;
+  width: 20%;
+  height: 30px;
+  border-radius: 5px;
+  margin: auto;
+  display: block;
+  background-color: white;
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#delete:hover {
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+#logout:hover {
+  background-color: rgba(59, 169, 156, 0);
+  cursor: pointer;
+  border: solid 1px rgb(59, 169, 156);
+  color: rgb(59, 169, 156);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}

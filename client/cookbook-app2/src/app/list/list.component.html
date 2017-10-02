@@ -1,0 +1,39 @@
+<div id="background">
+
+
+<button (click)="logout()" id="logout">Logout</button>
+
+  <div id="header">
+    <h1>Virtual Cookbook</h1>
+  </div>
+
+  <div class="container">
+    <div class="item" id="add">
+      <img src="http://s3.amazonaws.com/static.graphemica.com/glyphs/i500s/000/010/184/original/002B-500x500.png?1275328183" (click)="scroll()">
+    </div>
+    <div class="item" id="content" *ngFor="let recipe of recipes" (click)="goToRecipe(recipe)">
+      <img src="{{recipe.image_url}}">
+        <p class="caption">{{recipe.name}}</p>
+    </div>
+  </div>
+
+  <div id="form">
+    <h2>Add a recipe!</h2>
+    <div class="inputs">
+      <input [(ngModel)]="newRecipe.name" placeholder="Name"/>
+      <input [(ngModel)]="newRecipe.image_url" placeholder="Image"/>
+      <textarea cols="300" rows="4" [(ngModel)]="newRecipe.instructions" id="instructions" placeholder="(1) First step, (2) Second step..."></textarea>
+      <button (click)="postRecipe()" id="submit">Submit</button>
+    </div>
+  </div>
+
+
+  <!-- <div class="container">
+    <div class="item" id="content" *ngFor="let recipe of recipes" (click)="goToRecipe(recipe)">
+      <img src="{{recipe.image_url}}">
+        <p class="caption">{{recipe.name}} {{recipe.user_id}}</p>
+      <button (click)="deleteRecipe(recipe)" id="delete">Delete</button>
+    </div>
+  </div> -->
+
+</div>

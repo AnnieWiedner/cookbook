@@ -1,0 +1,10 @@
+<div id="header">
+  <h1>Virtual Cookbook Registration</h1>
+<div>
+<div class="container">
+  <input [(ngModel)]='newUser.name' placeholder="Name" class="item"/>
+  <input [(ngModel)]='newUser.email' placeholder="Email" class="item"/>
+  <input [(ngModel)]='newUser.password' type="password" placeholder="Password" class="item"/>
+  <input [(ngModel)]='newUser.image_url' placeholder="Image" class="item"/>
+  <button (click) ='registerUser()' class="item" id="register">Register</button>
+</div>
